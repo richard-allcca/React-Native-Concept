@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import CounterScreen from './src/screens/CounterScreen';
+// import SaludoScreen from './src/screens/SaludoScreen';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hola mundo!!! otra vez 😁</Text>
-    </View>
+    // <SaludoScreen />;
+    <CounterScreen />
   );
 };
 

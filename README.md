@@ -4,9 +4,15 @@ Crear un proyecto
 
     npx react-native init MyApp --template react-native-template-typescript --npm
 
-Correr en local
+Correr en local segun tu SO
 
     npm run start
+
+Corre en local andriod
+    npx react-native run-android
+
+Corre en local ios
+    npx react-native run-ios
 
 ## Comceptos tocados en esta sección
 
