@@ -13,8 +13,6 @@ const st = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#afeeee',
-    // borderWidth: 1,
-    // borderColor: 'red',
   },
   title: {
     height: 300,

@@ -28,15 +28,12 @@ const st = StyleSheet.create({
     backgroundColor: '#98fb98',
   },
   ctn: {
-    // width: '100%',
     height: '50%',
     backgroundColor: '#eee8aa',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     margin: 5,
-    // borderWidth: 1,
-    // borderColor: 'red',
   },
   txt: {
     color: 'blue',
