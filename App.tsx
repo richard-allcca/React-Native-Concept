@@ -1,25 +1,21 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-// import CounterScreen from './src/screens/CounterScreen';
-// import { BoxObjectModelScreen } from './src/screens/BoxObjectModelScreen';
-// import { PositionSreen } from './src/screens/PositionSreen';
-import { TareaDiseños } from './src/screens/TareaDiseños';
-// import { FlexDirectionBasics } from './src/screens/FlexDirection';
-// import { DimensionesScreen } from './src/screens/DimensionesScreen';
-// import SaludoScreen from './src/screens/SaludoScreen';
+
+import { CalculadoraScreen } from './src/screen/CalculadoraScreen';
+import { st } from './src/theme/appTheme';
+import { StatusBar, View } from 'react-native';
+
+// TODO - verificar que sea necesario <StatusBar/> y sus propiedades
 
 const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1}}>
-      {/* <SaludoScreen />; */}
-      {/* <CounterScreen /> */}
-      {/* <BoxObjectModelScreen /> */}
-      {/* <DimensionesScreen/> */}
-      {/* <PositionSreen/> */}
-      {/* <FlexDirectionBasics/> */}
-      <TareaDiseños/>
-    </SafeAreaView>
+    <View style={st.fondo} >
+      <StatusBar
+        backgroundColor="black"
+        barStyle="light-content"
+      />
+
+      <CalculadoraScreen />
+    </View>
   );
 };
 
