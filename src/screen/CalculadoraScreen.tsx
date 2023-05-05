@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { st } from '../theme/appTheme';
+import { StyleSheet, Text, View } from 'react-native';
 import { BotonCalc } from '../components/BotonCalc';
 import { useCalculador } from '../hooks/useCalculador';
 
@@ -85,3 +84,28 @@ export const CalculadoraScreen = () => {
     </View>
   );
 };
+
+const st = StyleSheet.create({
+  calculadoraCtn: {
+    flex:1,
+    paddingHorizontal: 20,
+    justifyContent: 'flex-end',
+  },
+  result: {
+    color: 'white',
+    fontSize: 60,
+    textAlign: 'right',
+    marginBottom: 10,
+  },
+  resultPeque: {
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 30,
+    textAlign: 'right',
+  },
+  fila: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 18,
+    paddingHorizontal: 10,
+  },
+});

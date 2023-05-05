@@ -11,7 +11,7 @@ const App = () => {
     <View style={st.fondo} >
       <StatusBar
         backgroundColor="black"
-        barStyle="light-content"
+        barStyle="default"
       />
 
       <CalculadoraScreen />

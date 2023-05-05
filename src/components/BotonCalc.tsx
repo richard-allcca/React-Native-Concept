@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -35,8 +34,6 @@ export const BotonCalc = ({
 const st = StyleSheet.create({
   boton: {
     height: 80,
-    // width: 80,
-    // backgroundColor: '#9b9b9b',
     borderRadius: 100,
     justifyContent: 'center',
     marginHorizontal: 10,
@@ -45,7 +42,5 @@ const st = StyleSheet.create({
     textAlign: 'center',
     padding: 10,
     fontSize: 30,
-    // color: 'white',
-    // fontWeight: '00',
   },
 });
