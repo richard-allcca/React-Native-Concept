@@ -44,7 +44,10 @@ export const CalculadoraScreen = () => {
 
   function btnDel() {
     if (numero.length > 0) setNumero(numero.substring(0, numero.length - 1));
-    if (numero.length === 1 || numero.includes('-')) setNumero('0');
+    if (numero.length === 1) setNumero('0');
+
+    if (numero.length === 2 && numero.includes('-')) setNumero('0');
+
   }
 
   function positionNegativo() {
