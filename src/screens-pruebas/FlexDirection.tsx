@@ -30,7 +30,7 @@ const PreviewLayout = ({
           style={[st.button, selectedValueDirection === value && st.selected]}>
           <Text
             style={[
-              st.buttonLabel,
+              st.btnTextDirection,
               selectedValueDirection === value && st.selectedLabel,
             ]}>
             {value}
@@ -100,10 +100,11 @@ const st = StyleSheet.create({
     backgroundColor: 'coral',
     borderWidth: 0,
   },
-  buttonLabel: {
-    fontSize: 12,
+  btnTextDirection: {
+    fontSize: 16,
     fontWeight: '500',
     color: 'coral',
+    textAlign: 'center',
   },
   selectedLabel: {
     color: 'white',
