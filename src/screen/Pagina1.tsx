@@ -8,9 +8,17 @@ import { st } from './../theme/appThemeNavigation';
 interface Props extends StackScreenProps<any, any> { }
 
 export const Pagina1 = ({ navigation }: Props) => {
+  // useEffect(() => {
+  //   navigation.setOptions({
+  //     // eslint-disable-next-line react/no-unstable-nested-components
+  //     headerLeft: () => {
+  //       return <Text>Menu</Text>;
+  //     },
+  //   });
+  // }, []);
+
   return (
     <View style={st.globalMargin}>
-
       <Text style={st.title}>Navigación con argumentos</Text>
 
       <Button
@@ -18,31 +26,24 @@ export const Pagina1 = ({ navigation }: Props) => {
         onPress={() => navigation.navigate('Pagina2')}
       />
 
-      <View style={{ flexDirection: 'row' }} >
+      {/* SECTION - botones */}
+      <View style={st.btnParamsContainer}>
 
         <TouchableOpacity
-          style={{...st.btnGrande, backgroundColor: '#5856d6'}}
-          onPress={() => navigation.navigate('PersonaScreen', {
-            id: 1,
-            nombre: 'Pepito',
-          })}
+          style={{ ...st.btnGrande, backgroundColor: '#5856d6' }}
+          onPress={() => navigation.navigate('PersonaScreen', { id: 1, nombre: 'Pepito' })}
         >
-          <Text style={st.btnGrandeText} >Params 1</Text>
+          <Text style={st.btnGrandeText}>Params 1</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-        style={st.btnGrande}
-          onPress={() => navigation.navigate('PersonRootStackParams', {
-            id: 2,
-            nombre: 'Root StackParams',
-          })}
+          style={st.btnGrande}
+          onPress={() => navigation.navigate('PersonRootStackParams', { id: 2, nombre: 'Root StackParams' })}
         >
-          <Text style={st.btnGrandeText} >RootStackParams</Text>
+          <Text style={st.btnGrandeText}>RootStackParams</Text>
         </TouchableOpacity>
 
       </View>
-
-
     </View>
   );
 };

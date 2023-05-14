@@ -75,6 +75,7 @@ También instalar las siguientes:
 
     npm install @react-navigation/stack
     npm install react-native-gesture-handler
+    npm install react-native-reanimated@2.14.4
 
 Además importar arriba de todo en App:
 
@@ -83,3 +84,11 @@ Además importar arriba de todo en App:
 e instalar este último módulo:
 
     npm install @react-native-masked-view/masked-view
+
+Drawer
+
+    npm install @react-navigation/drawer
+
+### Comando para iniciar sin cache en caso de errores
+
+    npx react-native start --reset-cache
