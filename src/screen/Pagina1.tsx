@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, Button, TouchableOpacity } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-import { st } from './../theme/appThemeNavigation';
+import { colors, st } from './../theme/appThemeNavigation';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface Props extends StackScreenProps<any, any> { }
@@ -30,17 +30,17 @@ export const Pagina1 = ({ navigation }: Props) => {
       <View style={st.btnParamsContainer}>
 
         <TouchableOpacity
-          style={{ ...st.btnGrande, backgroundColor: '#5856d6' }}
+          style={{ ...st.btnPagUno, backgroundColor: colors.purple }}
           onPress={() => navigation.navigate('PersonaScreen', { id: 1, nombre: 'Pepito' })}
         >
           <Text style={st.btnGrandeText}>Params 1</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={st.btnGrande}
+          style={st.btnPagUno}
           onPress={() => navigation.navigate('PersonRootStackParams', { id: 2, nombre: 'Root StackParams' })}
         >
-          <Text style={st.btnGrandeText}>RootStackParams</Text>
+          <Text style={st.btnGrandeText}>Params 2</Text>
         </TouchableOpacity>
 
       </View>

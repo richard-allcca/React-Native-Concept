@@ -6,24 +6,26 @@ import {
   DrawerContentScrollView,
   createDrawerNavigator,
 } from '@react-navigation/drawer';
-import {Image, TouchableOpacity, Text, View} from 'react-native';
+import { Image, TouchableOpacity, Text, View } from 'react-native';
 
-import {StackNavigator} from './StackNavigator';
-import {SettingsScreen} from '../screen/SettingsScreen';
-import {st} from '../theme/appThemeNavigation';
+import { SettingsScreen } from '../screen/SettingsScreen';
+import { st } from '../theme/appThemeNavigation';
+import { Tabs } from './TabsBottomNavigator';
 
 const Drawer = createDrawerNavigator();
 
 export const MenuLateral2 = () => {
   return (
-    <Drawer.Navigator drawerContent={props => <MenuInterno {...props} />}>
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+    <Drawer.Navigator
+      drawerContent={props => <MenuInterno {...props} />}
+    >
+      <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
   );
 };
 
-const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
+const MenuInterno = ({ navigation }: DrawerContentComponentProps) => {
   return (
     <DrawerContentScrollView>
 
@@ -42,14 +44,16 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
 
       <TouchableOpacity style={st.menuContainer}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('StackNavigator')}
-          style={st.btnMenu}>
+          style={st.btnMenu}
+          onPress={() => navigation.navigate('Tabs')}
+        >
           <Text style={st.optionsMenu}>Navegación</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
+          style={st.btnMenu}
           onPress={() => navigation.navigate('SettingsScreen')}
-          style={st.btnMenu}>
+        >
           <Text style={st.optionsMenu}>Ajustes</Text>
         </TouchableOpacity>
       </TouchableOpacity>

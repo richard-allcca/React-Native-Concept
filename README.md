@@ -89,6 +89,14 @@ Drawer
 
     npm install @react-navigation/drawer
 
+Bottom tabs navigator
+
+    npm install @react-navigation/bottom-tabs
+
+Material bottom Tabs navigator
+
+    npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+
 ### Comando para iniciar sin cache en caso de errores
 
     npx react-native start --reset-cache

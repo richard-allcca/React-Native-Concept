@@ -11,14 +11,16 @@ import { MenuLateral2 } from './src/navigator/MenuLateral2';
 
 const App = () => {
   return (
-    <NavigationContainer>
-
+    <NavigationContainer >
         {/* <StatusBar
           backgroundColor="black"
           barStyle="default"
         /> */}
+
       {/* <StackNavigator/> */}
+
       {/* <MenuLateral/> */}
+
       <MenuLateral2/>
     </NavigationContainer>
   );
